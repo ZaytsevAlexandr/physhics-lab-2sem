@@ -30,22 +30,16 @@ def read_numbers_from_fileX(filename):
     numbers = []
     with open(filename, 'r') as file:
         for line in file:
-            try:
-                number = float(line.strip()) + 273
-                numbers.append(number)
-            except ValueError:
-                print(f"Skipping line '{line.strip()}' as it doesn't contain a valid number.")
+            number = float(line.strip()) + 273
+            numbers.append(number)
 
     return np.array(numbers)
 def read_numbers_from_fileY(filename):
     numbers = []
     with open(filename, 'r') as file:
         for line in file:
-            try:
-                number = float(line.strip())
-                numbers.append(number)
-            except ValueError:
-                print(f"Skipping line '{line.strip()}' as it doesn't contain a valid number.")
+            number = float(line.strip())
+            numbers.append(number)
 
     return np.array(numbers)
 
