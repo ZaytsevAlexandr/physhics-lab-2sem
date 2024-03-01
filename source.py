@@ -26,11 +26,8 @@ def read_numbers_from_file(filename):
     numbers = []
     with open(filename, 'r') as file:
         for line in file:
-            try:
-                number = float(line.strip())
-                numbers.append(number)
-            except ValueError:
-                print(f"Skipping line '{line.strip()}' as it doesn't contain a valid number.")
+            number = float(line.strip())
+            numbers.append(number)
 
     return np.array(numbers)
 
